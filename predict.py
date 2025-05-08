@@ -33,8 +33,7 @@ def main():
     predictions = model.predict(X)
 
     results = pd.DataFrame({
-            'index': X.index,
-            'prediction': predictions
+            'target_pred': predictions
         })
     results.to_csv(PREDICTIONS_SAVE_PATH, index=False)
     print(f"Predictions saved to {PREDICTIONS_SAVE_PATH}")
